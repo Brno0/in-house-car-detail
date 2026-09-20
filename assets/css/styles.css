@@ -81,7 +81,12 @@ body::after{
 
 ::selection{background:var(--gold);color:#07121f;}
 a{color:inherit;}
-img{max-width:100%;display:block;}
+img{
+  max-width:100%;height:auto;display:block;
+  /* height:auto é essencial: os <img> declaram width/height no HTML para o
+     navegador reservar espaço, e sem isto o CSS encolhe só a largura e a
+     imagem achata. Regras mais específicas (.slot img) continuam valendo. */
+}
 button{font-family:inherit;cursor:pointer;}
 
 :focus-visible{
@@ -197,7 +202,7 @@ body.menu-aberto header{background:var(--navy-900);backdrop-filter:none;}
 /* Badge do hero: logo + anel girando + clarão de luz que passa uma vez ao carregar */
 .hero-badge{display:flex;align-items:center;justify-content:center;position:relative;}
 .hero-badge img{
-  width:100%;max-width:420px;border-radius:50%;
+  width:100%;height:auto;max-width:420px;border-radius:50%;
   filter:drop-shadow(0 22px 64px rgba(0,0,0,0.6));
 }
 .hero-badge .ring{
