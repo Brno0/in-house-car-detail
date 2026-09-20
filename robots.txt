@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Quando o domínio próprio existir, descomente e ajuste:
+# Sitemap: https://seudominio.com.br/sitemap.xml

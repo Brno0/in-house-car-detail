@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IN HOUSE CAR DETAIL — Estética automotiva a domicílio em Maringá</title>
+<meta name="description" content="Lavagem e estética automotiva na sua garagem, em Maringá e região. Você escolhe o serviço, o dia e o horário — a gente leva produtos e equipamentos até você.">
+<meta name="theme-color" content="#010d1c">
+
+<meta property="og:title" content="IN HOUSE CAR DETAIL — Estética automotiva a domicílio">
+<meta property="og:description" content="Lavagem e estética automotiva na sua garagem, em Maringá e região.">
+<meta property="og:image" content="assets/img/logo-hero.jpg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+
+<link rel="icon" type="image/jpeg" href="assets/img/logo-badge-160.jpg">
+<link rel="apple-touch-icon" href="assets/img/logo-badge-320.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- ============================ HEADER ============================ -->
+<header>
+  <nav class="wrap">
+    <a class="brand" href="#topo" aria-label="IN HOUSE CAR DETAIL — início">
+      <picture>
+        <source srcset="assets/img/logo-badge-160.webp" type="image/webp">
+        <img src="assets/img/logo-badge-160.jpg" alt="Logo IN HOUSE CAR DETAIL" width="44" height="44">
+      </picture>
+      <span class="logo"><b>IN HOUSE</b><span>CAR DETAIL</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#servicos">Serviços</a>
+      <!-- RESULTADOS: <a href="#resultados">Resultados</a> -->
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#agendamento">Agendar</a>
+      <a href="#contato">Contato</a>
+    </div>
+    <button class="btn btn-gold nav-cta" data-scroll="#agendamento">Agendar horário</button>
+    <button class="burger" id="burgerBtn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  </nav>
+</header>
+
+<!-- Fora do <header> de propósito: o backdrop-filter do cabeçalho cria um
+     bloco de contenção e o menu fixo herdava a altura dele (64px). -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#servicos">Serviços</a>
+  <!-- RESULTADOS: <a href="#resultados">Resultados</a> -->
+  <a href="#como-funciona">Como funciona</a>
+  <a href="#agendamento">Agendar</a>
+  <a href="#contato">Contato</a>
+</div>
+
+<!-- ============================ HERO ============================
+     SLOT DE FOTO: HERO-BG — configurado via CSS.
+     Arquivo: assets/img/hero/hero-bg.jpg (1920x1080, carro escuro molhado)
+     Para ativar, descomente a linha --hero-photo no topo de assets/css/styles.css
+     ============================================================== -->
+<section class="hero" id="topo">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Estética automotiva a domicílio</p>
+      <h1>Seu carro impecável,<br><span class="gold">sem sair de casa.</span></h1>
+      <p class="lead">Não temos loja física. Levamos produtos, equipamentos e mão de obra até a sua garagem, em Maringá e região. Você escolhe o serviço, o dia e o horário.</p>
+      <div class="hero-ctas">
+        <button class="btn btn-gold" data-scroll="#agendamento">Agendar meu horário</button>
+        <a href="#servicos" class="btn btn-ghost">Ver serviços</a>
+      </div>
+      <p class="hero-note"><span class="dot"></span> Atendimento aos sábados e domingos</p>
+    </div>
+    <div class="hero-badge">
+      <div class="ring" aria-hidden="true"></div>
+      <div class="flare" aria-hidden="true"></div>
+      <picture>
+        <source srcset="assets/img/logo-hero-840.webp" type="image/webp">
+        <img src="assets/img/logo-hero-840.jpg" alt="IN HOUSE CAR DETAIL — estética automotiva a domicílio" width="420" height="420" fetchpriority="high">
+      </picture>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SERVIÇOS ============================ -->
+<section id="servicos">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">O que fazemos</p>
+      <h2>Serviços</h2>
+      <p>Três níveis de lavagem, executados no seu endereço com nossos próprios produtos e equipamentos. Toque em um nível para ver tudo que está incluso.</p>
+    </div>
+
+    <!-- SLOTS DE FOTO: capa de cada card (SRV-*-CAPA) — geradas em assets/js/app.js -->
+    <div class="service-grid" id="serviceGrid"></div>
+
+    <!-- Polimento: linha separada, formato diferente das lavagens.
+         SLOT DE FOTO: SRV-POLIMENTO-CAPA (1600x1200) -->
+    <div class="polimento" id="polimentoBlock"></div>
+
+    <div class="requisito">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2 L20 7 V13 C20 18 16.5 21 12 22 C7.5 21 4 18 4 13 V7 Z" stroke="currentColor" stroke-width="1.6"/><path d="M9 12 L11 14.5 L15.5 9.5" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+      <div>
+        <b>Único requisito: água e energia no local</b>
+        <p>Como não temos estrutura fixa, precisamos de um ponto de água (torneira ou mangueira) e uma tomada acessível no seu endereço. Produtos, panos, aspirador e equipamentos são por nossa conta. Atendemos Maringá sem custo de deslocamento; cidades da região têm taxa fixa de R$ 20.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Seção "Resultados" (antes/depois) removida — ver _secao-resultados.html -->
+
+<!-- ============================ COMO FUNCIONA ============================ -->
+<section id="como-funciona">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Do pedido ao carro limpo</p>
+      <h2>Como funciona</h2>
+      <p>Sem loja, sem deixar o carro em lugar nenhum. O atendimento acontece inteiro no seu endereço.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <svg class="step-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="8" y="10" width="32" height="30" rx="3" stroke="currentColor" stroke-width="2"/><line x1="8" y1="18" x2="40" y2="18" stroke="currentColor" stroke-width="2"/><line x1="16" y1="6" x2="16" y2="14" stroke="currentColor" stroke-width="2"/><line x1="32" y1="6" x2="32" y2="14" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="28" r="2" fill="currentColor"/></svg>
+        <h3>Você escolhe e envia</h3>
+        <p>Selecione o serviço, um dia de fim de semana e um horário livre. Preencha seus dados e envie a pré-reserva.</p>
+      </div>
+      <div class="step">
+        <svg class="step-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M8 12h32v22H26l-8 7v-7H8z" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="23" r="1.8" fill="currentColor"/><circle cx="24" cy="23" r="1.8" fill="currentColor"/><circle cx="30" cy="23" r="1.8" fill="currentColor"/></svg>
+        <h3>A gente confirma no WhatsApp</h3>
+        <p>Entramos em contato para confirmar o horário, tirar dúvidas e alinhar o valor antes de fechar. Só então a reserva vira definitiva.</p>
+      </div>
+      <div class="step">
+        <svg class="step-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M6 30 L10 18 Q13 12 20 12 L28 12 Q35 12 38 18 L42 30" stroke="currentColor" stroke-width="2" fill="none"/><line x1="4" y1="30" x2="44" y2="30" stroke="currentColor" stroke-width="2"/><circle cx="15" cy="30" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="34" cy="30" r="4" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        <h3>Chegamos e executamos</h3>
+        <p>No dia combinado, chegamos com tudo o que é necessário e fazemos o serviço direto na sua garagem.</p>
+      </div>
+    </div>
+
+      <!-- A estrutura chega junto com a gente — fecha a seção "Como funciona".
+           SLOT DE FOTO: FAIXA-01. Ative pelo bloco PHOTOS em assets/js/app.js -->
+      <div class="estrutura">
+        <div class="slot" data-slot="FAIXA-01">
+          <div class="slot-empty">
+            <span class="code">FAIXA-01</span>
+            <span class="meta">horizontal 21:9 · 2100x900<br>você trabalhando na garagem do cliente</span>
+          </div>
+        </div>
+        <div class="estrutura-overlay"></div>
+        <div class="estrutura-content">
+          <h3>A estrutura chega junto com a gente</h3>
+          <p>Máquina, aspirador, produtos e panos saem daqui prontos. Você não precisa preparar nada além de deixar o espaço livre e o ponto de água acessível.</p>
+          <div class="estrutura-stats">
+            <div><b>0</b><span>deslocamento em Maringá</span></div>
+            <div><b>R$ 20</b><span>região metropolitana</span></div>
+            <div><b>Sáb / Dom</b><span>dias de atendimento</span></div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<!-- ============================ GALERIA MOSAICO ============================
+     SLOTS DE FOTO: GAL-01 a GAL-06 — tamanhos diferentes de propósito.
+     Arquivos: assets/img/galeria/01.jpg ... 06.jpg. Ative pelo bloco PHOTOS.
+     ========================================================================= -->
+<section id="galeria">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Trabalhos recentes</p>
+      <h2>Galeria</h2>
+      <p>Carros de clientes reais, atendidos em casa. Toque para ampliar.</p>
+    </div>
+
+    <div class="mosaico" id="mosaico">
+      <div class="slot m-tall" data-slot="GAL-01"><div class="slot-empty"><span class="code">GAL-01</span><span class="meta">foto da galeria</span></div></div>
+      <div class="slot m-wide" data-slot="GAL-02"><div class="slot-empty"><span class="code">GAL-02</span><span class="meta">foto da galeria</span></div></div>
+      <div class="slot m-wide" data-slot="GAL-03"><div class="slot-empty"><span class="code">GAL-03</span><span class="meta">foto da galeria</span></div></div>
+      <div class="slot m-tall" data-slot="GAL-04"><div class="slot-empty"><span class="code">GAL-04</span><span class="meta">foto da galeria</span></div></div>
+      <div class="slot m-big" data-slot="GAL-05"><div class="slot-empty"><span class="code">GAL-05</span><span class="meta">foto da galeria</span></div></div>
+      <div class="slot m-wide" data-slot="GAL-06"><div class="slot-empty"><span class="code">GAL-06</span><span class="meta">foto da galeria</span></div></div>
+      <div class="slot" data-slot="GAL-07"><div class="slot-empty"><span class="code">GAL-07</span><span class="meta">foto da galeria</span></div></div>
+      <div class="slot" data-slot="GAL-08"><div class="slot-empty"><span class="code">GAL-08</span><span class="meta">foto da galeria</span></div></div>
+      <div class="slot m-tall" data-slot="GAL-09"><div class="slot-empty"><span class="code">GAL-09</span><span class="meta">foto da galeria</span></div></div>
+      <div class="slot m-tall" data-slot="GAL-10"><div class="slot-empty"><span class="code">GAL-10</span><span class="meta">foto da galeria</span></div></div>
+      <div class="slot" data-slot="GAL-11"><div class="slot-empty"><span class="code">GAL-11</span><span class="meta">foto da galeria</span></div></div>
+      <div class="slot" data-slot="GAL-12"><div class="slot-empty"><span class="code">GAL-12</span><span class="meta">foto da galeria</span></div></div>
+      <div class="slot" data-slot="GAL-13"><div class="slot-empty"><span class="code">GAL-13</span><span class="meta">foto da galeria</span></div></div>
+      <div class="slot" data-slot="GAL-14"><div class="slot-empty"><span class="code">GAL-14</span><span class="meta">foto da galeria</span></div></div>
+      <div class="slot m-big" data-slot="GAL-15"><div class="slot-empty"><span class="code">GAL-15</span><span class="meta">foto da galeria</span></div></div>
+      <div class="slot m-big" data-slot="GAL-16"><div class="slot-empty"><span class="code">GAL-16</span><span class="meta">foto da galeria</span></div></div>
+    </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ AGENDAMENTO ============================ -->
+<section id="agendamento">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow center">Agenda</p>
+      <h2>Pedir um horário</h2>
+      <p>Vagas limitadas por dia. Você envia a pré-reserva e nós confirmamos pelo WhatsApp antes de fechar.</p>
+    </div>
+
+    <div class="booking-card">
+      <div class="stepper" id="stepper"></div>
+      <div class="booking-body" id="bookingBody"></div>
+      <div class="booking-nav" id="bookingNav"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ RODAPÉ ============================ -->
+<footer id="contato">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-brand">
+          <picture>
+            <source srcset="assets/img/logo-badge-320.webp" type="image/webp">
+            <img src="assets/img/logo-badge-320.jpg" alt="IN HOUSE CAR DETAIL" width="56" height="56" loading="lazy">
+          </picture>
+          <span class="logo"><b>IN HOUSE</b><span>CAR DETAIL</span></span>
+        </div>
+        <p>Estética automotiva sem loja física. Levamos produtos e equipamentos até a sua garagem. Você só precisa de água e energia no local.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Contato</h4>
+        <p class="foot-pessoa">Bruno Torres</p>
+        <a href="https://wa.me/5544997215139" target="_blank" rel="noopener">WhatsApp (44) 99721-5139</a>
+        <a href="tel:+5544997215139">Ligar (44) 99721-5139</a>
+        <a href="mailto:inhousecardetail@gmail.com">inhousecardetail@gmail.com</a>
+        <p>Atendimento aos sábados e domingos<br>Maringá e região</p>
+      </div>
+      <div class="foot-col">
+        <h4>Navegação</h4>
+        <a href="#servicos">Serviços</a>
+        <!-- RESULTADOS: <a href="#resultados">Antes e depois</a> -->
+        <a href="#galeria">Galeria</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#agendamento">Agendar</a>
+        <button type="button" class="link-rodape" data-privacidade>Privacidade</button>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 IN HOUSE CAR DETAIL</span>
+      <span>Maringá · PR · CNPJ a informar</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Modal de serviço -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal" id="modalContent"></div>
+</div>
+
+<!-- Aviso de privacidade (LGPD) -->
+<div class="modal-overlay" id="privOverlay" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal" id="privContent"></div>
+</div>
+
+<!-- Lightbox da galeria -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">✕</button>
+  <img id="lightboxImg" alt="">
+</div>
+
+<!-- WhatsApp flutuante: único canal que já converte enquanto o backend da Fase 4 não existe -->
+<a class="wa-float" id="waFloat" href="https://wa.me/5544997215139" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.5 1.7 6.4L3 29l6.8-1.8c1.9 1 4 1.6 6.2 1.6 7.2 0 13-5.8 13-13S23.2 3 16 3zm0 23.6c-2 0-3.9-.5-5.5-1.5l-.4-.2-4 1.1 1.1-3.9-.3-.4c-1.1-1.7-1.6-3.6-1.6-5.6 0-5.9 4.8-10.6 10.7-10.6 5.9 0 10.6 4.8 10.6 10.6 0 5.9-4.8 10.5-10.6 10.5zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.8 5.1.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 2-.8 2.2-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
